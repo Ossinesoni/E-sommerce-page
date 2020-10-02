@@ -1,0 +1,741 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Ecommerce Site</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	  <!-- Font Awesome -->
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css">
+	<!-- Google Fonts -->
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap">
+	<!-- Bootstrap core CSS -->
+	<link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/css/bootstrap.min.css" rel="stylesheet">
+	<!-- Material Design Bootstrap -->
+	<link href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.19.0/css/mdb.min.css" rel="stylesheet">
+	<!-- JQuery -->
+	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+	<!-- Bootstrap tooltips -->
+	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.4/umd/popper.min.js"></script>
+	<!-- Bootstrap core JavaScript -->
+	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/js/bootstrap.min.js"></script>
+	<script src="https://kit.fontawesome.com/a076d05399.js"></script>
+	
+	<style type="text/css">
+		@import url('https://fonts.googleapis.com/css?family=Poppins:400,500,600,700&display=swap');
+		@import url('https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap');
+		*{
+		  margin: 0;
+		  padding: 0;
+		  box-sizing: border-box;
+		  list-style: none;
+		  text-decoration: none;
+         }
+
+        label.logo{
+			  color: yellow; 
+			  font-size: 40px !important;
+			  line-height: 80px;
+			  padding: 0 140px;
+			  font-weight: 600;
+			 font-family: 'Dancing Script', cursive;
+		    }
+
+         nav{
+			  background: #0082e6;
+			  height: 80px;
+			  width: 100%;
+		    }
+			
+		 nav ul{
+			  float: right;
+			  margin-right: 100px;
+			  text-decoration: none;
+			}
+			
+		 nav ul li{
+			  display: inline-block;
+			  line-height: 80px;
+			  margin: 0 2px;
+			  text-decoration: none;
+
+			}
+			
+		 nav ul li a{
+			  color: #f2f2f2;
+			  font-weight: 500;
+			  font-size: 20px;
+			  padding: 7px 13px;
+			  border-radius: 3px;
+			  text-decoration: none;
+			  /* text-transform: uppercase; */
+			  font-family: 'Poppins', sans-serif;
+			}
+			
+		 a.home,.nav-icon:hover{
+			  background: #1b9bff;
+			  transition: .5s;
+			  text-decoration: none;
+			  color: #ffffff;
+			}
+		 .dropdown-toggle:hover{
+			  background: #1b9bff;
+			  transition: .5s;
+			  text-decoration: none;
+			  color: #ffffff;
+			  padding: 10px;
+			  border-radius: 2px;
+
+			  }
+			.dropdown-toggle{
+			  	font-weight: 400;color: rgb(200,250,220,0.5);
+			  }
+			.nav-icon .badge1-icon:hover{
+              background: none;
+              color: #ffffff;
+			}
+			.checkbtn{
+			  font-size: 20px;
+			  color: white;
+			  float: left;
+			  line-height: 80px;
+			  margin-right: 40px;
+			  cursor: pointer;
+			  display: none;
+			}
+
+			#check{
+			  display: none;
+			}
+			section{
+			  background: url(bg1.jpg) no-repeat;
+			  background-size: cover;
+			  height: calc(100vh - 80px);
+			  text-align: center;
+			}
+
+			.badge1 {
+			   position:relative;
+			}
+			.badge1[data-badge]:after {
+			   content:attr(data-badge);
+			   position:absolute;
+			   top:-10px;
+			   right:-10px;
+			   font-size:.7em;
+			   background:red;
+			   color:white;
+			   width:18px;height:18px;
+			   text-align:center;
+			   line-height:18px;
+			   border-radius:50%;
+			   box-shadow:0 0 1px #333;
+			}
+			.nav-icon a .badge1-icon:hover{
+              background: none;
+			}
+			.card-banner1{
+				margin-top: 40px;
+				margin-left: 200px;
+				margin-right: 200px;
+				text-align: center;
+				width: 70%;
+			}
+            .carousel-inner{
+            	margin-top: 40px;
+				margin-left: 200px;
+				margin-right: 200px;
+				text-align: center;
+				width: 70%;
+            }
+            .sub-footer{
+            	 background-color: rgb(128,0,0);
+            	 margin-bottom: 0;
+            	 padding:10px;
+            	 color: #ffffff;
+            }
+            .icons{
+            	border-radius: 50%;
+            	color: white;
+            	background: red;
+            	padding: 10px; 
+            	margin-right: 5px;}
+
+	         img {
+			    filter: alpha(opacity=100);
+			    opacity: 1;
+			}
+			img:hover {
+			    filter: alpha(opacity=70);
+			    opacity: 0.7;
+			}
+			.card-img-top{
+				 height: 120px;
+				 width: 100px;
+				 margin: auto;
+			}
+			.content {
+              padding-bottom:30px; /* Height of the footer element */
+            }
+            .strike-mark{
+            	text-decoration: line-through;
+            	padding: 5px;
+            }
+			footer {
+			    width:100%;
+			    height:250px;	 
+			    bottom:0;
+			    left:0;
+			    background-color: #2c292f; 
+			    position: relative;
+			}
+			@media (max-width: 952px){
+			  label.logo{
+			    font-size: 27px;
+			    padding-left: 25px;
+			  }
+			  nav ul li a{
+			    font-size: 16px;
+			  }
+			  
+			}
+			@media (min-width: 859px){
+			  label.logo{
+			    font-size: 27px;
+			    padding-left: 25px;
+			  }
+			  nav ul li a{
+			    font-size: 16px;
+			  }
+			}
+
+
+			@media (max-width: 858px){
+			  .checkbtn{
+			    display: block;
+			    margin-right: 40px;
+			    line-height: 80px;
+			    margin:25px 20px;
+			  }
+			  #check:checked ~ ul{
+			    left: 0;
+			  }
+			  label.logo{
+			    font-size: 27px !important;
+			    padding-left: 10px;
+			  }
+			  ul{
+			    position: fixed;
+			    width: 100%;
+			    height: 100vh;
+			    background: blue;
+			    top: 80px;
+			    left: -100%;
+			    text-align: center;
+			    transition: all .5s;
+			  }
+			  nav ul li{
+			    display: block;
+			    margin: 50px 0;
+			    line-height: 30px;
+			  }
+			  nav ul li a{
+			    font-size: 20px;
+			    color: black;
+			  }
+			  .nav-icon:hover,a.home{
+			    background: #0082e6;
+			    color: #ffffff;
+			  }
+			  
+			}
+		
+
+ </style>
+</head>
+<body>
+<!------- header part --------->
+<nav>
+      <input type="checkbox" id="check">
+      <label for="check" class="checkbtn">
+        <i class="fas fa-bars"></i>
+      </label>
+      <label class="logo">e-Buy</label>
+      <ul>      		
+		<li><a class="home" href="#">Home</a></li>
+		<li><a class="nav-icon" href="#">About</a></li>
+		<a class="text-white dropdown-toggle" data-toggle="dropdown"
+        aria-haspopup="true" aria-expanded="false">Collection</a>
+	  <!--Menu-->
+	   <div class="dropdown-menu dropdown-primary" style="font-weight: 100px;">
+	    <a class="dropdown-item" href="#">Summer Collection</a>
+	    <a class="dropdown-item" href="#">Winter Collection</a>
+	    <a class="dropdown-item" href="#">Spring Collection</a>
+	    <a class="dropdown-item" href="#">Festive Collection</a>	   
+	   </div>	
+		<li><a class="nav-icon" href="#">Shop</a></li>
+		<a class="text-white dropdown-toggle" data-toggle="dropdown"
+        aria-haspopup="true" aria-expanded="false">Category</a>
+		  <!--Menu-->
+		  <div class="dropdown-menu dropdown-primary" style="font-weight: 100px;">
+		    <a class="dropdown-item" href="#">Men Wear</a>
+		    <a class="dropdown-item" href="#">Women Wear</a>
+		    <a class="dropdown-item" href="#">Kids Wear</a>
+		    <a class="dropdown-item" href="#">Girls Wear</a>
+		    <a class="dropdown-item" href="#">Boys Wear</a>
+		  </div>
+		</div>				
+		<li>
+			<div class="input-group form-sm">
+			  <input class="form-control my-0 py-1 bordered" type="text" placeholder="Search" aria-label="Search">
+			  <div class="input-group-append">
+			    <span class="input-group-text" id="basic-text1"><i class="fas fa-search text-primary"
+			        aria-hidden="true"></i></span>
+			  </div>
+           </div>
+       </li>
+		<li><a href="#"><i class="badge1 fa fa-heart badge1-icon text-white" data-badge="10"></i></a></li>
+		<li><a href="#"><i class="badge1 fa fa-shopping-cart badge1-icon text-white" data-badge="6" ></i></a></li>
+		<li><a href="#"><i class="badge1 fa fa-bell badge1-icon text-white" data-badge="3" ></i></a></li>		
+		<li><a href="#"><i class="badge1 fas fa-user badge1-icon text-white" ><span style="font-family: 'Poppins', sans-serif;font-weight: 300;"> Login</span></i></a></li>	
+     </ul>
+</nav>
+ <div class="section" >
+ 	<!-- Banner 1 ---->
+ 	<div class="card card-banner1">
+ 	<div class=" banner1 row">
+ 		<div class="banner1-content1 col-md-6 col-12 m-20 p-4" style="margin-top: 20px;">
+ 			<h5>MADEWELL</h5>
+ 			<div>Summer Collection</div>
+ 			<p>&#8377;1499  <strike class="strike-mark">  &#8377;1999</strike></p>
+ 			<div><button class="btn btn-primary mr-2">Shop Now</button><button class="btn btn-light">Shop Later</button></div>
+ 		</div>
+ 		<div class="banner1-image1 col-md-6 col-12 m-20 p-4">
+ 			<img class="banner1-img" src="https://th.bing.com/th/id/OIP.t4xFJY0pGlRyMMWL9IrvvAHaCt?w=333&h=128&c=7&o=5&dpr=1.25&pid=1.7">
+ 		</div>
+ 		
+ 	</div>
+ </div>
+ <!--- Product features --->
+ <div class="card card-banner1" style="border: none">
+ <div class="row">
+   <div class="col-md-4">
+   	 <div class="card card-img">	
+	    <div><img src="https://th.bing.com/th/id/OPA.spdpGPM3tKx2Xg474C474?w=160&h=150&rs=1&o=5&dpr=1.25&pid=21.1"></div>
+	    <hr>
+	    <div>Bag</div>		
+	    <div>Summer Collection</div>
+		<p>&#8377;980  <strike class="strike-mark">  &#8377;1299</strike></p>		
+ 	 </div>   	
+  </div>
+  <div class="col-md-4">
+     <div class="card">	
+	    <div><img src="https://th.bing.com/th/id/OPA.ge3VLqQtDSdi5g474C474?w=160&h=150&rs=1&o=5&dpr=1.25&pid=21.1"></div><hr>
+	    <div class="hover-overlay"></div>		
+	    <div>Shoes</div>	
+	    <div>Summer Collection</div>
+		<p>&#8377;1249  <strike class="strike-mark">  &#8377;1999</strike></p>			
+  </div>
+  </div>
+   	<div class="col-md-4">
+      <div class="card">	
+	    <div class="hover hover-1 text-white rounded"><img src="https://th.bing.com/th/id/OPA.SHZemXzcRkwmqg474C474?w=160&h=150&rs=1&o=5&dpr=1.25&pid=21.1"></div><hr>	
+	    <div>Blue Polyster print dress</div>		
+	    <div>Summer Collection</div>
+		<p>&#8377;1999  <strike class="strike-mark">  &#8377;2549</strike></p>				
+	 </div>
+    </div>
+ </div>
+</div>
+</div>
+<div class="card card-banner1">
+  <div class=" banner1 row">
+ 	<div class="banner1-image1 col-md-6 col-12 m-20 p-4">
+ 	    <img class="banner1-img" src="https://th.bing.com/th/id/OIP.doz9GZ_885i1KnZkfzzEGgHaDy?w=300&h=178&c=7&o=5&dpr=1.25&pid=1.7">
+ 	</div>
+ 	<div class="banner1-content1 col-md-6 col-12 m-20 p-4" style="margin-top: 20px;">
+		<h5>MADEWELL</h5>
+		<div>Summer Collection</div>
+		<p>&#8377;1499  <strike class="strike-mark">  &#8377;1999</strike></p>
+		<div><button class="btn btn-primary mr-2">Shop Now</button><button class="btn btn-light">Shop Later</button></div>
+ 	</div>	
+ </div>
+</div>
+<!-- Slider Features -->
+<!--Carousel Wrapper-->
+<div id="multi-item-example" class="carousel slide carousel-multi-item" data-ride="carousel">
+
+  <!--Controls-->
+  <div class="controls-top">
+
+   <a class="carousel-control-prev" href="#multi-item-example" role="button" data-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="sr-only">Previous</span>
+  </a>
+  <a class="carousel-control-next" href="#multi-item-example" role="button" data-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="sr-only">Next</span>
+  </a>
+  </div>
+
+  <!--/.Controls-->
+
+  <!--Indicators-->
+  <ol class="carousel-indicators">
+    <li data-target="#multi-item-example" data-slide-to="0" class="active"></li>
+    <li data-target="#multi-item-example" data-slide-to="1"></li>
+    <li data-target="#multi-item-example" data-slide-to="2"></li>
+  </ol>
+  <!--/.Indicators-->
+
+  <!--Slides-->
+  <div class="carousel-inner" role="listbox">
+
+    <!--First slide-->
+    <div class="carousel-item active">
+      <div class="row">
+      <div class="col-md-3 col-12">
+        <div class="card mb-2 card-img">
+          <img class="card-img-top"
+            src="https://rukminim1.flixcart.com/image/580/696/k5vcya80pkrrdj/fabric/a/f/u/beige-shubh-beige-indi-avtaar-original-imafjgvxq4eswdyt.jpeg?q=50"
+            alt="Card image cap">
+          <div class="card-body">
+            <p class="card-title">INDIAN CULTURE Brocade, Solid Kurta & Palazo</p>
+            <p class="card-text">&#8377;699  <strike class="strike-mark">  &#8377;2499</strike></p>    
+           <!-- <svg xmlns="http://www.w3.org/2000/svg" class="_2oLiqr" width="28" height="28" viewBox="0 0 20 16"><path d="M8.695 16.682C4.06 12.382 1 9.536 1 6.065 1 3.219 3.178 1 5.95 1c1.566 0 3.069.746 4.05 1.915C10.981 1.745 12.484 1 14.05 1 16.822 1 19 3.22 19 6.065c0 3.471-3.06 6.316-7.695 10.617L10 17.897l-1.305-1.215z" fill="#2874F0" class="_35Y7Yo" stroke="#FFF" fill-rule="evenodd" opacity=".9"></path></svg> -->      
+            <a href="#"><i class="fas fa-heart icons"></i></a>
+            <a href="#"><i class="fa fa-shopping-cart icons"></i></a>
+            <a href="#"><i class="fas fa-share-alt icons"></i></a>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-3 col-12">
+        <div class="card mb-2 card-img">
+          <img class="card-img-top"
+            src="https://rukminim1.flixcart.com/image/580/696/jxw5g280/jacket/6/2/g/xl-mntnw-4024-montrez-original-imafg82gbevyfwwz.jpeg?q=50"
+            alt="Card image cap">
+          <div class="card-body">
+            <p class="card-title">Full Sleeve Solid Women Denim Jacket</p>
+            <p class="card-text">&#8377;1499  <strike class="strike-mark">  &#8377;1999</strike></p>           
+            <a href="#"><i class="fas fa-heart icons"></i></a>
+            <a href="#"><i class="fa fa-shopping-cart icons"></i></a>
+            <a href="#"><i class="fas fa-share-alt icons"></i></a>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-3 col-12">
+        <div class="card mb-2 card-img">
+          <img class="card-img-top"
+            src="https://rukminim1.flixcart.com/image/580/696/k65d18w0/shirt/m/3/k/50-bfmrnsht02ab-being-fab-original-imaeapugymrzxaeg.jpeg?q=50"
+            alt="Card image cap">
+          <div class="card-body">
+            <p class="card-title">Men Solid Formal Rugby Color Shirt</p>
+            <p class="card-text">&#8377;599  <strike class="strike-mark">  &#8377;1390</strike></p>           
+            <a href="#"><i class="fas fa-heart icons"></i></a>
+            <a href="#"><i class="fa fa-shopping-cart icons"></i></a>
+            <a href="#"><i class="fas fa-share-alt icons"></i></a>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-3 col-12">
+        <div class="card mb-2 card-img">
+          <img class="card-img-top"
+            src="https://rukminim1.flixcart.com/image/580/696/k7531jk0/t-shirt/z/c/a/s-rh-roundnck-x-hlfslv-blk-org-skin-rockhard-original-imafpfvkfnzcegcn.jpeg?q=50"
+            alt="Card image cap">
+          <div class="card-body">
+            <p class="card-title">Men Block Round Neck Black, Orange, Grey T-Shirt</p>
+            <p class="card-text">&#8377;289  <strike class="strike-mark">  &#8377;739</strike></p>           
+            <a href="#"><i class="fas fa-heart icons"></i></a>
+            <a href="#"><i class="fa fa-shopping-cart icons"></i></a>
+            <a href="#"><i class="fas fa-share-alt icons"></i></a>
+          </div>
+        </div>
+      </div>
+   </div>
+    </div>
+    <!--/.First slide-->
+
+    <!--Second slide-->
+    <div class="carousel-item">
+      <div class="row">
+      <div class="col-md-3 col-12">
+        <div class="card mb-2 card-img">
+          <img class="card-img-top"
+            src="https://rukminim1.flixcart.com/image/580/696/k5vcya80pkrrdj/fabric/a/f/u/beige-shubh-beige-indi-avtaar-original-imafjgvxq4eswdyt.jpeg?q=50"
+            alt="Card image cap">
+          <div class="card-body">
+            <p class="card-title">INDIAN CULTURE Brocade, Solid Kurta & Palazo</p>
+            <p class="card-text">&#8377;699  <strike class="strike-mark">  &#8377;2499</strike></p>         
+            <a href="#"><i class="fas fa-heart icons"></i></a>
+            <a href="#"><i class="fa fa-shopping-cart icons"></i></a>
+            <a href="#"><i class="fas fa-share-alt icons"></i></a>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-3 col-12">
+        <div class="card mb-2 card-img">
+          <img class="card-img-top"
+            src="https://rukminim1.flixcart.com/image/580/696/jxw5g280/jacket/6/2/g/xl-mntnw-4024-montrez-original-imafg82gbevyfwwz.jpeg?q=50"
+            alt="Card image cap">
+          <div class="card-body">
+            <p class="card-title">Full Sleeve Solid Women Denim Jacket</p>
+            <p class="card-text">&#8377;1499  <strike class="strike-mark">  &#8377;1999</strike></p>           
+            <a href="#"><i class="fas fa-heart icons"></i></a>
+            <a href="#"><i class="fa fa-shopping-cart icons"></i></a>
+            <a href="#"><i class="fas fa-share-alt icons"></i></a>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-3 col-12">
+        <div class="card mb-2 card-img">
+          <img class="card-img-top"
+            src="https://rukminim1.flixcart.com/image/580/696/k65d18w0/shirt/m/3/k/50-bfmrnsht02ab-being-fab-original-imaeapugymrzxaeg.jpeg?q=50"
+            alt="Card image cap">
+          <div class="card-body">
+            <p class="card-title">Men Solid Formal Rugby Color Shirt</p>
+            <p class="card-text">&#8377;599  <strike class="strike-mark">  &#8377;1390</strike></p>           
+            <a href="#"><i class="fas fa-heart icons"></i></a>
+            <a href="#"><i class="fa fa-shopping-cart icons"></i></a>
+            <a href="#"><i class="fas fa-share-alt icons"></i></a>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-3 col-12">
+        <div class="card mb-2 card-img">
+          <img class="card-img-top"
+            src="https://rukminim1.flixcart.com/image/580/696/k7531jk0/t-shirt/z/c/a/s-rh-roundnck-x-hlfslv-blk-org-skin-rockhard-original-imafpfvkfnzcegcn.jpeg?q=50"
+            alt="Card image cap">
+          <div class="card-body">
+            <p class="card-title">Men Block Round Neck Black, Orange, Grey T-Shirt</p>
+            <p class="card-text">&#8377;289  <strike class="strike-mark">  &#8377;739</strike></p>           
+            <a href="#"><i class="fas fa-heart icons"></i></a>
+            <a href="#"><i class="fa fa-shopping-cart icons"></i></a>
+            <a href="#"><i class="fas fa-share-alt icons"></i></a>
+          </div>
+        </div>
+      </div>
+   </div>
+    </div>
+    <!--/.Second slide-->
+
+    <!--Third slide-->
+   <div class="carousel-item">
+      <div class="row">
+      <div class="col-md-3 col-12">
+        <div class="card mb-2 card-img">
+          <img class="card-img-top"
+            src="https://rukminim1.flixcart.com/image/580/696/k5vcya80pkrrdj/fabric/a/f/u/beige-shubh-beige-indi-avtaar-original-imafjgvxq4eswdyt.jpeg?q=50"
+            alt="Card image cap">
+          <div class="card-body">
+            <p class="card-title">INDIAN CULTURE Brocade, Solid Kurta & Palazo</p>
+            <p class="card-text">&#8377;699  <strike class="strike-mark">  &#8377;2499</strike></p>    
+            <a href="#"><i class="fas fa-heart icons"></i></a>
+            <a href="#"><i class="fa fa-shopping-cart icons"></i></a>
+            <a href="#"><i class="fas fa-share-alt icons"></i></a>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-3 col-12">
+        <div class="card mb-2 card-img">
+          <img class="card-img-top"
+            src="https://rukminim1.flixcart.com/image/580/696/jxw5g280/jacket/6/2/g/xl-mntnw-4024-montrez-original-imafg82gbevyfwwz.jpeg?q=50"
+            alt="Card image cap">
+          <div class="card-body">
+            <p class="card-title">Full Sleeve Solid Women Denim Jacket</p>
+            <p class="card-text">&#8377;1499  <strike class="strike-mark">  &#8377;1999</strike></p>           
+            <a href="#"><i class="fas fa-heart icons"></i></a>
+            <a href="#"><i class="fa fa-shopping-cart icons"></i></a>
+            <a href="#"><i class="fas fa-share-alt icons"></i></a>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-3 col-12">
+        <div class="card mb-2 card-img">
+          <img class="card-img-top"
+            src="https://rukminim1.flixcart.com/image/580/696/k65d18w0/shirt/m/3/k/50-bfmrnsht02ab-being-fab-original-imaeapugymrzxaeg.jpeg?q=50"
+            alt="Card image cap">
+          <div class="card-body">
+            <p class="card-title">Men Solid Formal Rugby Color Shirt</p>
+            <p class="card-text">&#8377;599  <strike class="strike-mark">  &#8377;1390</strike></p>           
+            <a href="#"><i class="fas fa-heart icons"></i></a>
+            <a href="#"><i class="fa fa-shopping-cart icons"></i></a>
+            <a href="#"><i class="fas fa-share-alt icons"></i></a>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-3 col-12">
+        <div class="card mb-2 card-img">
+          <img class="card-img-top"
+            src="https://rukminim1.flixcart.com/image/580/696/k7531jk0/t-shirt/z/c/a/s-rh-roundnck-x-hlfslv-blk-org-skin-rockhard-original-imafpfvkfnzcegcn.jpeg?q=50"
+            alt="Card image cap">
+          <div class="card-body">
+            <p class="card-title">Men Block Round Neck Black, Orange, Grey T-Shirt</p>
+            <p class="card-text">&#8377;289  <strike class="strike-mark">  &#8377;739</strike></p>           
+            <a href="#"><i class="fas fa-heart icons"></i></a>
+            <a href="#"><i class="fa fa-shopping-cart icons"></i></a>
+            <a href="#"><i class="fas fa-share-alt icons"></i></a>
+          </div>
+        </div>
+      </div>
+   </div>
+  </div>
+    <!--/.Third slide-->
+  </div>
+  <!--/.Slides-->
+</div>
+<!--/.Carousel Wrapper-->
+
+<!-- banner3 --->
+<div class="card card-banner1 mb-2 content">
+ 	<div class=" banner1 row">
+ 		<div class="banner1-image1 col-md-6 col-12 m-20 p-4">
+ 			<img class="banner1-img" src="https://th.bing.com/th/id/OIP.mFuP-0ag4t-S-LidrijmHQHaGT?w=244&h=207&c=7&o=5&dpr=1.25&pid=1.7">
+ 		</div>
+ 		<div class="banner1-content1 col-md-6 col-12 m-20 p-4" style="margin-top: 20px;">
+ 			<h5>MADEWELL</h5>
+ 			<div>Summer Collection</div>
+ 			<p>&#8377;1499  <strike class="strike-mark">  &#8377;1999</strike></p>
+ 			<div><button class="btn btn-primary mr-2">Shop Now</button><button class="btn btn-light">Shop Later</button></div>
+ 		</div>		
+ 	</div>
+</div>	
+</div>
+
+<!--- Footer --->
+   <!-- footer -->
+     <footer>
+        <div class="container">
+            <div class="row ">
+                <div class="col-md-4 text-center text-md-left ">
+                    
+                    <div class="py-0">
+                        <h3 class="my-4 text-white">About<span class="mx-2 font-italic text-warning ">e-Buy</span></h3>
+
+                        <p class="footer-links font-weight-bold">
+                            <a class="text-white" href="#">Contact</a>
+                            |
+                            <a class="text-white" href="#">About</a>
+                            |
+                            <a class="text-white" href="#">Services</a>
+                            |
+                            <a class="text-white" href="#">Careers</a>
+                            |
+                            <a class="text-white" href="#">Features</a>
+                        </p>
+                       <div class="">
+                       	<h5 style="color: white">Subscribe</h5>
+                       <!-- Default form register -->
+						<form class="form-inline" action="#!" name="myForm" id="myForm">
+                          <div>                          
+						    <input type="email" name="email" class="form-control py-1" id="mail" placeholder="Email" required="">
+						  </div>
+						  <button type="submit" class="btn btn-default py-2 rounded" onclick="subscribe()">Send</button>           
+						</form>
+                       </div>
+                    </div>
+
+                </div>
+                
+                <div class="col-md-4 text-white text-center text-md-left ">
+                    <div class="py-2 my-4">
+                        <div>
+                            <p class="text-white"> <i class="fa fa-map-marker mx-2 "></i>
+                                    309 - Durga Complex,
+                                   Bldg. No. AB-1, Main Rd,
+                                  Ranchi, Jharkhand - 834001</p>
+                        </div>
+
+                        <div> 
+                            <p><i class="fa fa-phone  mx-2 "></i> +91 22-2528889</p>
+                        </div>
+                        <div>
+                            <p><i class="fa fa-envelope  mx-2"></i><a href="mailto:support@ebuy.com">support@ebuy.com</a></p>
+                        </div>  
+                    </div>  
+                </div>
+                
+                <div class="col-md-4 text-white my-4 text-center text-md-left ">
+                    <span class=" font-weight-bold ">About Us</span>
+					<p class="text-warning my-2" >We offer all types of E-commerce products and Services across India</p>
+                    <div class="py-2">
+                        <a href="#"><i class="fab fa-facebook fa-2x text-primary mx-3"></i></a>
+                        <a href="#"><i class="fab fa-google-plus fa-2x text-danger mx-3"></i></a>
+                        <a href="#"><i class="fab fa-twitter fa-2x text-info mx-3"></i></a>
+                        <a href="#"><i class="fab fa-whatsapp fa-2x text-success mx-3"></i></a>
+                        <a href="#"><i class="fab fa-youtube fa-2x text-danger mx-3"></i></a>
+                    </div>
+                </div>
+            </div>  
+        </div>
+      <div class="sub-footer">
+      	<p class="text-center">&copy; Copyright 2020, <span style="color: orange;">e-Buy.com</span> & All Right Reserved.</p>
+      	<p class="text-center mt-0">Developed and Maintaiined by Ossine.</p>
+      </div>
+     </footer>
+     <!-- end of footer -->
+     <script type="text/javascript">
+	 email='';
+	 function subscribe(){
+	 		  if( document.myForm.email.value == "" ) {
+	        alert( "Please provide your Email id!" );
+	        document.myForm.EMail.focus() ;
+	        return false;
+	  }
+    myForm.reset();
+	     return alert('Subscribed successfully!!');
+	   
+	}
+	$('[data-toggle="slide-collapse"]').on('click', function() {
+	      $navMenuCont = $($(this).data('target'));
+	      $navMenuCont.animate({
+	      'width': 'toggle'
+	   }, 350);
+	   $(".menu-overlay").fadeIn(500);
+	  });
+
+   	$(".menu-overlay").click(function(event) {
+	  $(".navbar-toggle").trigger("click");
+	  $(".menu-overlay").fadeOut(500);
+	});
+	var windowWidth = $(window).width();
+	if (windowWidth > 767) {
+
+	  $('ul.nav li.dropdown').hover(function() {
+	    $(this).find('>.dropdown-menu').stop(true, true).delay(200).fadeIn(500);
+	  }, function() {
+	    $(this).find('>.dropdown-menu').stop(true, true).delay(200).fadeOut(500);
+	  });
+
+	  $('ul.nav li.dropdown-submenu').hover(function() {
+	    $(this).find('>.dropdown-menu').stop(true, true).delay(200).fadeIn(500);
+	  }, function() {
+	    $(this).find('>.dropdown-menu').stop(true, true).delay(200).fadeOut(500);
+	  });
+
+
+	  $('ul.dropdown-menu [data-toggle=dropdown]').on('click', function(event) {
+	    event.preventDefault();
+	    event.stopPropagation();
+	    $(this).parent().siblings().removeClass('open');
+	    $(this).parent().toggleClass('open');
+	    // $('b', this).toggleClass("caret caret-up");
+	  });
+	}
+	if (windowWidth < 767) {
+	  $('ul.dropdown-menu [data-toggle=dropdown]').on('click', function(event) {
+	    event.preventDefault();
+	    event.stopPropagation();
+	    $(this).parent().siblings().removeClass('open');
+	    $(this).parent().toggleClass('open');
+	    // $('b', this).toggleClass("caret caret-up");
+	  });
+	}
+
+   </script>
+</body>
+</html>  
